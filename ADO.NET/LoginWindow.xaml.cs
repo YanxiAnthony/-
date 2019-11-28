@@ -37,6 +37,7 @@ namespace ADO.NET
             this.Close();
         }
 
+        //ExecuteReader方法连接数据库判断用户名密码
         private void Ok_Click(object sender, RoutedEventArgs e)
         {
             if (txtun.Text.Length <= 0 || pw.Password.Length <= 0)
@@ -80,7 +81,7 @@ namespace ADO.NET
                 con.Close();
             }
 
-
+            //ExecuteScalar方法连接数据库判断用户名密码
             //else
             //{
             //    SqlConnection con = new SqlConnection("Data Source =.;Initial Catalog=Student;Integrated Security=true");
