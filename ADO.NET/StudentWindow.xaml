@@ -1,0 +1,60 @@
+﻿<Window x:Class="ADO.NET.StudentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ADO.NET"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Title="StudentWindow" Height="750" Width="1000" MouseLeftButtonDown="Window_MouseLeftButtonDown" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="img/9.jpg"/>
+        </Grid.Background>
+        <Canvas>
+            <GroupBox Canvas.Top="10" Canvas.Left="10" Height="150" Width="972" Header="学生信息" FontSize="30"/>
+            <TextBlock Canvas.Left="30" Canvas.Top="60" Text="学号：" FontSize="25"/>
+            <TextBlock Canvas.Left="160" Canvas.Top="60" Text="姓名：" FontSize="25"/>
+            <TextBlock Canvas.Left="290" Canvas.Top="60" Text="生日：" FontSize="25"/>
+            <TextBlock Canvas.Left="420" Canvas.Top="60" Text="地址：" FontSize="25"/>
+            <TextBlock Canvas.Left="550" Canvas.Top="60" Text="电话：" FontSize="25"/>
+            <TextBlock Canvas.Left="680" Canvas.Top="60" Text="入学时间：" FontSize="25"/>
+            <TextBox Canvas.Left="30" Canvas.Top="100" Width="110" Height="30" FontSize="25" Background="Transparent" Name="stuno"/>
+            <TextBox Canvas.Left="160" Canvas.Top="100" Width="110" Height="30" FontSize="25" Background="Transparent" Name="stuname"/>
+            <TextBox Canvas.Left="290" Canvas.Top="100" Width="110" Height="30" FontSize="25" Background="Transparent" Name="stuborn"/>
+            <TextBox Canvas.Left="420" Canvas.Top="100" Width="110" Height="30" FontSize="25" Background="Transparent" Name="stuaddress"/>
+            <TextBox Canvas.Left="550" Canvas.Top="100" Width="110" Height="30" FontSize="25" Background="Transparent" Name="stuphone"/>
+            <TextBox Canvas.Left="680" Canvas.Top="100" Width="110" Height="30" FontSize="25" Background="Transparent" Name="stutime"/>
+            <Button Content="修改" FontSize="20" Canvas.Left="850" Canvas.Top="60" Width="80" Height="30" Name="Update_Button" Click="Update_Button_Click"/>
+            <Button Content="删除" FontSize="20" Canvas.Left="850" Canvas.Top="110" Width="80" Height="30" Name="Delect_Button" Click="Delect_Button_Click"/>
+            <GroupBox Canvas.Top="180" Canvas.Left="10" Height="100" Width="972" Header="操作" FontSize="30"/>
+            <TextBlock Canvas.Top="230" Canvas.Left="30" Text="搜索条件：" FontSize="25"/>
+            <ComboBox Canvas.Top="225" Canvas.Left="160" FontSize="25" Height="40" Width="200" Name="combobox">
+                <ComboBoxItem>学号</ComboBoxItem>
+                <ComboBoxItem>姓名</ComboBoxItem>
+                <ComboBoxItem>生日</ComboBoxItem>
+                <ComboBoxItem>地址</ComboBoxItem>
+                <ComboBoxItem>电话</ComboBoxItem>
+                <ComboBoxItem>入学时间</ComboBoxItem>
+                <ComboBoxItem>所有记录</ComboBoxItem>
+            </ComboBox>
+            <TextBlock Canvas.Top="230" Canvas.Left="470" Text="搜索内容：" FontSize="25"/>
+            <TextBox Canvas.Top="225" Canvas.Left="600" Height="40" Width="200" FontSize="25" Background="Transparent" Name="searchtxt"/>
+            <Button Canvas.Top="230" Canvas.Left="850" Content="搜索" FontSize="20" Width="80" Height="30" Name="Search_Button" Click="Search_Button_Click"/>
+            <GroupBox Canvas.Top="300" Canvas.Left="10" Header="添加记录" Height="410" Width="300" FontSize="30"/>
+            <TextBlock Canvas.Left="30" Canvas.Top="350" Text="学号：" FontSize="25"/>
+            <TextBlock Canvas.Left="30" Canvas.Top="400" Text="姓名：" FontSize="25"/>
+            <TextBlock Canvas.Left="30" Canvas.Top="450" Text="生日：" FontSize="25"/>
+            <TextBlock Canvas.Left="30" Canvas.Top="500" Text="地址：" FontSize="25"/>
+            <TextBlock Canvas.Left="30" Canvas.Top="550" Text="电话：" FontSize="25"/>
+            <TextBlock Canvas.Left="30" Canvas.Top="600" Text="入学时间：" FontSize="25"/>
+            <TextBox Name="addno" Canvas.Left="100" Canvas.Top="350" Width="130" Height="30" FontSize="25" Background="Transparent"/>
+            <TextBox Name="addname" Canvas.Left="100" Canvas.Top="400" Width="130" Height="30" FontSize="25" Background="Transparent"/>
+            <TextBox Name="addborn" Canvas.Left="100" Canvas.Top="450" Width="130" Height="30" FontSize="25" Background="Transparent"/>
+            <TextBox Name="addaddress" Canvas.Left="100" Canvas.Top="500" Width="130" Height="30" FontSize="25" Background="Transparent"/>
+            <TextBox Name="addphone" Canvas.Left="100" Canvas.Top="550" Width="130" Height="30" FontSize="25" Background="Transparent"/>
+            <TextBox Name="addtime" Canvas.Left="150" Canvas.Top="600" Width="130" Height="30" FontSize="25" Background="Transparent"/>
+            <Button Content="添加" Canvas.Left="120" Canvas.Top="660" FontSize="20" Width="80" Height="30" Name="Add_Button" Click="Add_Button_Click"/>
+            <DataGrid Canvas.Top="320" Canvas.Left="330" Height="390" Width="650" Name="dataGrid" Background="Transparent" SelectionChanged="dataGrid_SelectionChanged"/>
+        </Canvas>
+    </Grid>
+</Window>
